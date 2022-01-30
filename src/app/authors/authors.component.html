@@ -1,0 +1,7 @@
+<!-- ! here we want to display number of authors -->
+<h2>{{ authors.length }} Authors</h2>
+
+<!-- ! {{}} -> string interpolation -->
+<ul>
+  <li *ngFor="let author of authors">{{ author }}</li>
+</ul>
