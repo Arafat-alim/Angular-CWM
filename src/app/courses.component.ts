@@ -14,6 +14,7 @@ import { CoursesService } from './courses.service';
       [class.active]="isActive"
       value="Save"
     />
+    <!-- --------- -->
     <h2>{{ getTitle() }}</h2>
     <h2 [textContent]="title"></h2>
     <ul>
@@ -26,6 +27,9 @@ import { CoursesService } from './courses.service';
         <td [attr.colSpan]="colSpan" ]></td>
       </tr>
     </table>
+    <button [style.backgroundColor]="isActive ? 'blue' : 'red'" ]>
+      Saving
+    </button>
   `,
 })
 export class CoursesComponent {
