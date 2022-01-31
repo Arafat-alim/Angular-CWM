@@ -8,7 +8,12 @@ import { CoursesService } from './courses.service';
   //   template: '<h2>{{"Title : "+ title}}</h2>',
   template: `
     <!-- adding button -->
-    <input type="button" class="btn btn-primary" value="Save" />
+    <input
+      type="button"
+      class="btn btn-primary"
+      [class.active]="isActive"
+      value="Save"
+    />
     <h2>{{ getTitle() }}</h2>
     <h2 [textContent]="title"></h2>
     <ul>
@@ -24,6 +29,7 @@ import { CoursesService } from './courses.service';
   `,
 })
 export class CoursesComponent {
+  isActive = 'true';
   title = 'Angular Coursed On demand';
   courses;
   colSpan = '2';
